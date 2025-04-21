@@ -1,0 +1,13 @@
+include README.md
+include LICENSE
+include requirements.txt
+
+recursive-include gdig *.py
+recursive-include gdig/dataset *.py
+recursive-include gdig/nngeometry *.py
+
+recursive-include examples *.py
+recursive-include examples *.ipynb
+
+global-exclude *.pyc
+global-exclude __pycache__ 
