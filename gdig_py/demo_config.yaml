@@ -1,0 +1,35 @@
+# Data paths
+seed_set_path:         data/seed.json
+candidate_pool_path:   data/candidate.json
+model_checkpoint:      bigscience/bloom-560m
+tokenizer_path:        bigscience/bloom-560m
+
+# Hessian computation parameters (from kfac_launcher.py)
+hessian_device:        cuda:1
+num_gpus:             4
+hessian_trials:       1
+hessian_output:       hessian.pkl
+
+# Influence score parameters (from query_loss_launcher.py)
+influence_batch_size:  2
+influence_lambda:      0.5
+full_score:           false
+use_ekfac:            false
+start_index:          null
+end_index:            null
+layer_type:           b
+
+# Clustering parameters
+num_clusters:         50
+cluster_metric:       cosine
+
+# Model-specific settings
+model_type:           bloom
+max_length:           256
+micro_batch_size:     4
+use_prompt_loss:      false
+
+# General settings
+output_dir:           results/gdig_demo
+log_level:            INFO
+visualize:            false 
